@@ -149,6 +149,7 @@ html section button.lined.thin.modified, body section button.lined.thin.modified
   box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
 }
 .borders_mod {
+      min-height: 520px;
   border: solid 2px #c54344;
    -webkit-align-self: center;
       -ms-flex-item-align: center;
@@ -184,7 +185,7 @@ header h1 {
 }
 .about {
     text-align: center;
-    padding: 50px 200px;
+    padding: 50px 0;
     font-size: 1.2rem;
     color: #fff;
     line-height: 1.6;
@@ -276,7 +277,7 @@ header h1 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  /*box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);*/
 }
 .cd-timeline-img img {
   display: block;
@@ -295,7 +296,7 @@ header h1 {
   background: #c54344;
 }
 .cd-timeline-img.cd-location {
-  background: #d3d5d4;
+  background: #162634;
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
@@ -382,6 +383,20 @@ header h1 {
   border-radius: 0.25em;
   padding: 1em;
   box-shadow: 0 3px 0 #d7e4ed;
+  border: dashed 2px #41403E;
+    webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    background: transparent;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    color: black;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    margin-bottom: 70px;
 }
 .cd-timeline-content:after {
   content: "";
@@ -836,6 +851,8 @@ event-topics-area .event-topics .topics .nav-tabs li.active a, .event-topics-are
 }
 .basic_package {
   min-height: 770px;
+  margin-bottom: 50px;
+  box-shadow: 20px 38px 20px -26px rgba(0, 0, 0, 0.2);
 }
  .pricing_min .item .basic_package .p-bottom a {
     width: 200px;
@@ -867,6 +884,7 @@ event-topics-area .event-topics .topics .nav-tabs li.active a, .event-topics-are
 }
 .count_down-1 div div span {
     color: rgb(255, 255, 255);
+    font: normal 12px/48px "Intro", sans-serif;
 }
 .modified-left {
   text-align: left;
@@ -887,7 +905,7 @@ event-topics-area .event-topics .topics .nav-tabs li.active a, .event-topics-are
   text-align: left;
 }
 .about_trainer_list li:before {
-  content: '\27A4';
+  content: '\2713';
     padding-right: 20px;
     color: #c54344;
     
@@ -1116,11 +1134,29 @@ button, a.button {
 }
 
 .register-form .btn:hover, .register-form .btn:focus {
-    color: rgb(255, 255, 255);
+    color: #c54344;
+    background-color: #fff;
 }
 .register-form .btn {
-    border-color: #ff6330;
-    color: #ff6330;
+    border-color: #c54344;
+    color: #c54344;
+        border: solid 2px #c54344;
+    color: #c54344;
+    background: #fff;
+    margin: 30px 0;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    background: transparent;
+    padding: 1rem 1rem;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    color: #c54344;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 .btn-top:hover, .btn-top:active, .btn-top:focus {
     color: /*#ff6330/*3ac353*/#fff;
@@ -1138,12 +1174,511 @@ button, a.button {
   font-size: 40px;
 }
 header {
-  line-height: 100px;
+  line-height: 70px;
 }
 html section button, body section button {
   font-size: 20px;
 }
 event-topics-area .event-topics .ux-design {
     padding-left: 0;
+}
+}
+
+/**
+ * ===============================
+ *  Map and Contant Style
+ * ===============================
+ */
+
+#map_contact {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+}
+
+#map_contact #map-btn-tab {
+    position: relative;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.contact-maps-row {
+    overflow: hidden;
+}
+
+.map-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.map-map .map-body {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.map-map .map-body #map {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#map-btn {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    font-size: 50px;
+    padding: 40px 28px 40px 18px;
+    top: 50%;
+    left: -46px;
+    margin-top: -30px;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+#map-btn:hover,
+#map-btn:focus {
+    background-color: #fff;
+}
+
+#map-btn.active {
+    background-color: #fff;
+}
+
+#map-btn i {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.contact-maps-box {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.contact-maps-box .btn {
+    width: 100%;
+    margin: 0px 0px;
+}
+
+.contact-maps-box .btn:hover,
+.contact-maps-box .btn:focus {
+    color: #fff;
+}
+
+.contact-maps-box form {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.contact-maps-box form p {
+    float: none;
+    text-align: left;
+    margin-bottom: 15px;
+}
+/**
+ * ======================================
+ * From Input Field Style
+ * ======================================
+ */
+
+.form-cus {
+    height: auto;
+    padding: 16px;
+    border-radius: 0px;
+    font-size: 16px;
+}
+
+.form-cus:focus {
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0 #fff;
+    box-shadow: 0 0 0 0 #fff;
+}
+/**
+ * ======================================
+ * Social Icon Style
+ * ======================================
+ */
+
+.social-icon strong {
+    display: block;
+}
+
+.social-icon ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+.social-icon ul li a {
+    margin-top: 5px !important;
+}
+
+.social-icon ul li a:hover,
+.social-icon ul li a:active,
+.social-icon ul li a:focus {
+    color: #fff;
+}
+
+.social-icon ul li:last-child {
+    margin-right: 0px !important;
+}
+
+.social-icon .fa {
+    font-size: 20px;
+}
+/* Contact Address */
+
+.contact-address .address-ul li {
+    list-style: none;
+    margin-top: 10px;
+    position: relative;
+}
+
+.contact-address .address-ul .fa {
+    margin-right: 15px;
+    position: absolute;
+    top: 2px;
+    left: -40px;
+    width: 30px;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.contact-maps-outside {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%, 0%, 0) !important;
+    transform: translate3d(100%, 0, 0) !important;
+}
+/**
+ * ===============================
+ *  Pricing Tables Style
+ * ===============================
+ */
+
+#pricing-table .table {
+    display: inline-block;
+    margin-top: 70px;
+}
+
+.table-single {
+    padding: 20px 0;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    will-change: opacity, transform;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.table-single .important {
+    position: absolute;
+    color: #fff;
+    font-weight: 400;
+    padding: 5px 20px;
+    width: 115px;
+    top: 10px;
+    left: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+.table-single .meta-heading {
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.table-single .meta-heading,
+.table-single .meta-price {
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.table-single .meta-price {
+    padding: 25px 0;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+.table-single .meta-price .meta-price-inner {
+    position: absolute;
+    left: 50%;
+    top: 53px;
+    margin-left: -60px;
+}
+
+.table-single .meta-price .currency {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.table-single .meta-price .rate {
+    font-size: 70px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    line-height: 0.9;
+    letter-spacing: 3px;
+}
+
+.table-single .meta-price .period {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 0;
+    font-style: italic;
+    margin-left: 30px;
+}
+
+.table-single ul {
+    padding: 0px;
+}
+
+.table-single ul li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.table-single .btn {
+    opacity: 0.6;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 991px) {
+    .table-single .btn {
+        font-size: 12px;
+        padding: 10px 10px;
+    }
+    .l2ul {
+        min-height: 100px !important;
+    }
+}
+
+.table-single:hover {
+    box-shadow: 0 5px 65px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 5px 65px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 65px 0 rgba(0, 0, 0, 0.15);
+    -o-box-shadow: 0 5px 65px 0 rgba(0, 0, 0, 0.15);
+}
+
+.table-single:hover .btn {
+    opacity: 1;
+}
+
+.btn-scroll-2 {
+    text-align: center;
+}
+
+.btn-scroll-2 .price {
+    font-weight: bold;
+    font-size: 64px;
+    color: #ff6330;
+}
+
+.btn-scroll-2 .price sup {
+    font-size: 18px;
+    vertical-align: top;
+    margin-left: -20px;
+}
+
+/**
+ * ====================================
+ * Register Form Style
+ * ====================================
+ */
+
+.register-background {
+    background: url('../img/reg-parallax.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+#register .section-header .section-heading {
+    color: #fff;
+}
+
+#register .section-header p {
+    color: #bbb;
+}
+
+.register-form {
+    margin-top: 60px;
+}
+
+.register-form .form-cus {
+    color: #fff;
+    background-color: transparent;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.register-form .form-cus::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.register-form .form-cus:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.register-form .form-cus::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.register-form .form-cus:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.register-form select {
+    background: url(../images/arrow.png) no-repeat right;
+    font-size: 20px;
+    line-height: 1;
+    height: 68px;
+    -webkit-appearance: none;
+    color: rgba(255, 255, 255, 0.86);
+    padding: 0 18px;
+    margin-bottom: 20px !important;
+}
+
+.register-form select:focus {
+    box-shadow: 0 0 0 0 #ffffff;
+    -moz-box-shadow: 0 0 0 0 #ffffff;
+    -webkit-box-shadow: 0 0 0 0 #ffffff;
+    -o-box-shadow: 0 0 0 0 #ffffff;
+}
+
+.register-form select option {
+    color: #000;
+    font-size: 16px;
+    height: 20px;
+}
+
+.register-form .btn {
+    width: 100% !important;
+}
+
+.register-form .btn:hover,
+.register-form .btn:focus {
+    color: #fff;
+}
+
+.quote {
+  background-color: #c54344;
+  color: #fff;
+  padding: 70px 0;
+  font-size: 24px;
+      font-family: "Droid Serif", serif;
+      line-height: 2;
+}
+blockquote {
+    position: relative;
+    marign: 0;
+    padding: 30px 120px;
+    text-align: center;
+    font-size: 30px;
+}
+blockquote:before, blockquote:after {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    font-size: 120px;
+    line-height: 1;
+}
+blockquote:before {
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+blockquote:after {
+    bottom: 0;
+    right: 0;
+    content: "\201D";
+}
+.nav-tabs.modified {
+  color: #303e49;
+}
+
+footer {
+  background-color: #162634;
+  padding: 50px 0;
+  text-align: center;
+   font: 400 14px/34px "Montserrat", sans-serif;
+}
+footer  a:hover {
+  color: #c54344;
+  text-decoration: none;
+}
+.trainer img {
+  padding-right: 60px;
+}
+@media screen and (max-width: 620px) {
+  .register-form .btn {
+    font-size: 16px;
+  }
+  .nav-tabs li {
+    
+    text-align: justify;
+}
+  .event-topics-area .event-topics .ux-design {
+     padding-left: 0px; 
+}
+.cd-timeline-content h2 {
+  font-size: 20px;
+}
+.cd-timeline-content {
+  padding: 0.5em;
+}
+.nav-tabs {
+  padding-top: 15px;
+}
+blockquote {
+    position: relative;
+    margin: 0;
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 20px;
+}
+blockquote:before, blockquote:after {
+  font-size: 70px;
+}
+.trainer img {
+  padding-bottom: 30px;
+  padding-right: 0px;
 }
 }
