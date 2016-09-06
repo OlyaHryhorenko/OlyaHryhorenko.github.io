@@ -39,6 +39,28 @@ h1, h2 {
   font-weight: bold;
 }
 
+.loader {
+  background: none repeat scroll 0 0 black;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+  .loader .loader_inner {
+    background-image: url("../img/loading.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-posirion: center center;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute; }
 /* -------------------------------- 
 
 Modules - reusable parts of our design
@@ -1648,6 +1670,15 @@ footer  a:hover {
   padding-right: 60px;
 }
 @media screen and (max-width: 620px) {
+  .video iframe {
+    height: 300px!important;
+  }
+  .why_trainer iframe {
+    height: 300px!important;
+  }
+  .borders_mod {
+    margin: 0 20px;
+  }
   .register-form .btn {
     font-size: 16px;
   }
